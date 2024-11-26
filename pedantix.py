@@ -32,7 +32,7 @@ for mot in mots:
         champ_saisie.send_keys(Keys.RETURN)
 
         # Attendre un court instant avant le prochain mot
-        #time.sleep(1)
+        time.sleep(0.1)
 
     except Exception as e:
         print(f"Une erreur est survenue avec le mot '{mot}': {e}")
