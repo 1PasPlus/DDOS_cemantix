@@ -7,8 +7,6 @@ import time
 with open('liste_francais_optimise.txt', 'r', encoding='utf-8') as f:
     mots = [line.strip() for line in f]
 
-random.shuffle(mots)
-
 # Configurer le WebDriver (assurez-vous que le chromedriver est dans votre PATH)
 driver = webdriver.Chrome()
 
