@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+import random
 import time
 
 # Charger la liste des mots français depuis le fichier
@@ -9,6 +10,8 @@ with open('liste_francais.txt', 'r', encoding='utf-8') as f:
 
 # Configurer le WebDriver (assurez-vous que le chromedriver est dans votre PATH)
 driver = webdriver.Chrome()
+
+random.shuffle(mots)
 
 # Ouvrir l'URL
 driver.get('https://cemantix.certitudes.org')
