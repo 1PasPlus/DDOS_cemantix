@@ -4,8 +4,10 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 # Charger la liste des mots français depuis le fichier
-with open('liste_francais.txt', 'r', encoding='utf-8') as f:
+with open('liste_francais_optimise.txt', 'r', encoding='utf-8') as f:
     mots = [line.strip() for line in f]
+
+random.shuffle(mots)
 
 # Configurer le WebDriver (assurez-vous que le chromedriver est dans votre PATH)
 driver = webdriver.Chrome()
@@ -32,11 +34,11 @@ for mot in mots:
         champ_saisie.send_keys(Keys.RETURN)
 
         # Attendre un court instant avant le prochain mot
-        time.sleep(0.1)
+        #time.sleep(0.01)
 
     except Exception as e:
         print(f"Une erreur est survenue avec le mot '{mot}': {e}")
         continue
 
 # Fermer le navigateur
-driver.quit()
+#driver.quit()

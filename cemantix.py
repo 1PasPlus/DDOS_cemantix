@@ -2,10 +2,13 @@ from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 import time
+import random
 
 # Charger la liste des mots français depuis le fichier
 with open('liste_francais.txt', 'r', encoding='utf-8') as f:
     mots = [line.strip() for line in f]
+
+random.shuffle(mots)
 
 # Configurer le WebDriver (assurez-vous que le chromedriver est dans votre PATH)
 driver = webdriver.Chrome()
@@ -40,4 +43,4 @@ for mot in mots:
         continue
 
 # Fermer le navigateur
-driver.quit()
+#driver.quit()
