@@ -5,7 +5,7 @@ import time
 import random
 
 # Charger la liste des mots français depuis le fichier
-with open('liste_francais.txt', 'r', encoding='utf-8') as f:
+with open('liste_francais_optimise_cemantix.txt', 'r', encoding='utf-8') as f:
     mots = [line.strip() for line in f]
 
 random.shuffle(mots)

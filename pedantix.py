@@ -4,7 +4,7 @@ from selenium.webdriver.common.keys import Keys
 import time
 
 # Charger la liste des mots français depuis le fichier
-with open('liste_francais_optimise.txt', 'r', encoding='utf-8') as f:
+with open('liste_francais_optimise_frequence.txt', 'r', encoding='utf-8') as f:
     mots = [line.strip() for line in f]
 
 # Configurer le WebDriver (assurez-vous que le chromedriver est dans votre PATH)
